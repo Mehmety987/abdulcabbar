@@ -1,0 +1,2432 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/*1. Sayfa*/
+
+.container-nav {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.container-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5F4B44;
+    opacity: 45%;
+    z-index: 0;
+}
+
+.background {
+    display: none;
+}
+
+.background img {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.openMenu, .closeMenu {
+    display: none; 
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+
+.prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    font-size: 30px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.background.active {
+    display: block;
+}
+
+.kaffo-logo img {
+    position: absolute;
+    width: 124px;
+    height: 124px;
+    top: 12%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 7%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.top-nav img {
+    width: 42px;
+    height: 42px;
+}
+
+.border-left {
+    border-left: 1px solid white;
+    height: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.top-nav input[type=text] {
+    border-radius: 100px;
+    width: 210px;
+    height: 32px;
+    margin-left: 20px;
+    padding-right: 30px;
+    background: url('img/search_bar_icon.png') no-repeat right 10px center;
+    background-size: 16px;
+    background-color: white;
+}
+
+.top-nav ul {
+    display: flex;
+    list-style-type: none;
+    color: white;
+    margin-top: 2%;
+}
+
+.borders {
+    border-left: 1px solid white;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 15%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav ul li {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0 10px;
+
+}
+
+.bottom-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    margin-right: 30px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.bottom-nav ul li a::before,
+.bottom-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.bottom-nav ul li a::before {
+    top: -5px;
+    width: 0;
+}
+
+.bottom-nav ul li a::after {
+    bottom: -5px;
+    width: 0;
+}
+
+.bottom-nav ul li a:hover::before,
+.bottom-nav ul li a:hover::after {
+    width: 100%;
+}
+
+.bottom-nav ul li a:hover::before,
+.bottom-nav ul li a:hover::after,
+.bottom-nav ul li .active::before,
+.bottom-nav ul li .active::after {
+    width: 100%;
+}
+
+/*2. Sayfa*/
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0 10px;
+    gap: 32px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    color: white;
+    margin-left: 350px;
+}
+
+.box1,.box2,
+.box3,.box4 {
+    width: 250px;
+    height: 250px;
+    background-color: #C08457;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    box-shadow: 10px 10px 15px black;
+    transition: all 0.5s ease;
+}
+
+.box1 img,.box2 img,
+.box3 img,.box4 img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 10px;
+}
+
+.box1 div,.box2 div,
+.box3 div,.box4 div {
+    margin-top: 10px;
+}
+
+.box1:hover,.box2:hover,
+.box3:hover,.box4:hover {
+    background-color: #A65C39;
+    transform: scale(1.05);
+
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+.second-title {
+    text-align: left;
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 10%;
+    color: #5F4B44;
+}
+
+.second-title .border-bottom {
+    width: 450px;
+    height: 2px;
+    background-color: #5F4B44;
+    margin: 10px auto;
+}
+
+.second-title img {
+    width: 100px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+
+/*3. Sayfa*/
+
+.third-page-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: #F9F2E2;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    overflow: hidden;
+}
+
+
+.first-slider-box,
+.second-slider-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    z-index: 0;
+}
+
+.first-slider-box.active,
+.second-slider-box.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.second-box {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    justify-content: right;
+}
+
+.second-box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+.spiral-border {
+    margin: 0 20px;
+}
+
+.spiral-border img {
+    width: 130px;
+    height: 124px;
+}
+
+
+.right-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #5F4B44;
+    font-size: 28px;
+    text-align: left;
+    margin: 20px;
+    white-space: nowrap;
+}
+
+.right-title h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.right-title-border {
+    height: 2px;
+    background-color: #000;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.explanation-title {
+    color: #5F4B44;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+button.prev2,
+button.next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #5F4B44;
+    font-size: 40px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+button.prev2 {
+    left: 10px;
+}
+
+button.next2 {
+    right: 10px;
+}
+
+button.prev2:hover,
+button.next2:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*4. Sayfa*/
+
+.four-page-container {
+    padding: 80px 80px 80px 80px;
+}
+
+.locations {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.locations img {
+    width: 400px;
+    height: 300px;
+    margin-top: 30px;
+}
+
+.locate1 img:hover,
+.locate2 img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+
+}
+
+.locate1 {
+    margin-right: -20px;
+}
+
+.locate2 {
+    margin-right: -60px;
+}
+
+.spiral-border-2 img {
+    width: 110px;
+    height: 180px;
+
+}
+
+.top-title {
+    margin-left: 200px;
+    color: #5F4B44;
+    font-weight: 700;
+}
+
+.border-bottom {
+    height: 2px;
+    background-color: #5F4B44;
+    width: 400px;
+    margin-left: 200px;
+}
+
+/*5. Sayfa*/
+
+.background-image-7 {
+    position: absolute;
+}
+
+.background-image-7 img {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.title-5 {
+    color: #F9F2E2;
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.border-bottom2 {
+    position: absolute;
+    height: 2px;
+    background-color: #F9F2E2;
+    width: 550px;
+    margin-top: 200px;
+    margin-left: 55%;
+}
+
+.explanation-title2 {
+    position: absolute;
+    color: #F9F2E2;
+    margin-top: 220px;
+    margin-left: 55%;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.download-icon {
+    position: absolute;
+    display: flex;
+    margin-left: 55%;
+    gap: 20px;
+}
+
+.download-icon img {
+    width: 220px;
+    height: 70px;
+    margin-top: 330px;
+    cursor: pointer;
+}
+
+.QR-icon {
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 82%;
+}
+
+.QR-icon img {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+}
+
+.QR-title {
+    position: absolute;
+    color: #F9F2E2;
+    font-size: 30px;
+    margin-top: 560px;
+    margin-left: 67%;
+    font-weight: 400;
+}
+
+.discount-title {
+    position: absolute;
+    color: #F9F2E2;
+    font-size: 30px;
+    margin-top: 47%;
+    margin-left: 82%;
+    font-weight: 400;
+}
+
+.discount-icon {
+    position: absolute;
+    margin-top: 42%;
+    margin-left: 67%;
+}
+
+.discount-icon img {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+}
+
+/*6. sayfa*/
+
+.six-page-container {
+    display: flex;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 66.6%;
+    overflow: hidden;
+    padding: 150px;
+}
+
+.six-slider-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right-title2 {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.right-title2 h2 {
+    font-size: 55px;
+    font-weight: 700;
+    color: #5F4B44;
+}
+
+.right-title-border2 {
+    width: 600px;
+    border: 1px solid #5F4B44;
+    margin-bottom: 20px;
+}
+
+.explanation-title3 {
+    font-size: 34px;
+    font-weight: 400;
+    color: #5F4B44;
+}
+
+.second-box21 {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
+    margin-right: 200px;
+}
+
+.second-box21 img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.spiral-border2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spiral-border2 img {
+    width: 160px;
+    height: 154px;
+}
+
+/*7. Sayfa*/
+
+.seven-page-container {
+    display: flex;
+}
+
+
+.left-icon {
+    width: 30%;
+    height: 600px;
+    background-color: #5F4B44;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-icon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.footer-icon-border {
+    height: 60px;
+    width: 1px;
+    background-color: #F9F2E2;
+}
+
+.explanation-title4 {
+    margin-top: 20px;
+    font-size: 18px;
+    margin-top: 80px;
+    color: #F9F2E2;
+    font-weight: 400;
+}
+
+.right-icon {
+    display: flex;
+    width: 70%;
+    height: 600px;
+    background-color: #F9F2E2;
+}
+
+.right-icon h2 {
+    font-size: 40px;
+}
+
+.title-1,
+.title-2,
+.title-3 {
+    margin-left: 5%;
+    margin-top: 7%;
+    color: #5F4B44;
+    font-weight: 400;
+}
+
+.title-2,
+.title-3 {
+    margin-left: 100px;
+}
+
+.title-1-border {
+    width: 300px;
+    border: 1px solid #5F4B44;
+}
+
+
+.title-1 ul {
+    padding-left: 0;
+}
+
+.title-1 ul li {
+    list-style-type: none;
+}
+
+.title-1 ul li a {
+    color: #5F4B44;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.title-1 ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-1 ul li div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.title-2-border {
+    width: 200px;
+    border: 1px solid #5F4B44;
+}
+
+.title-2 ul {
+    padding-left: 0;
+}
+
+.title-2 ul li {
+    list-style-type: none;
+}
+
+.title-2 ul li a {
+    color: #5F4B44;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.title-2 ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-2 ul li div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.title-3-border {
+    width: 280px;
+    border: 1px solid #5F4B44;
+}
+
+.title-3-text {
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+form {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+form input[type="search"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px 40px 10px 10px;
+    font-size: 21px;
+    border: 2px solid #5F4B44;
+    border-radius: 30px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #5F4B44;
+    color: #F9F2E2;
+}
+
+form input[type="search"]::placeholder {
+    color: #F9F2E2;
+    font-style: italic;
+    font-size: 21px;
+    text-align: center;
+}
+
+form input[type="search"]:focus {
+    border-color: #8C7569;
+}
+
+form img {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    cursor: pointer;
+}
+
+.title-text {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+
+/*Responsive  2560 */
+
+@media (min-width: 2560px) {
+
+    /*1. Sayfa*/
+
+    .kaffo-logo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .top-nav img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .border-left {
+        height: 62px;
+    }
+
+    .top-nav input[type=text] {
+        width: 310px;
+        height: 52px;
+    }
+
+    .top-nav ul {
+        font-size: 30px;
+    }
+
+    .borders {
+        height: 40px;
+    }
+
+    .bottom-nav ul li a {
+        font-size: 40px;
+    }
+
+    .prev,
+    .next {
+        font-size: 58px;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    /*2. Sayfa*/
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 350px;
+        height: 350px;
+        font-size: 56px;
+    }
+
+    .box1 img,
+    .box2 img,
+    .box3 img,
+    .box4 img {
+        width: 126px;
+        height: 126px;
+    }
+
+    .box1 div,
+    .box2 div,
+    .box3 div,
+    .box4 div {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .second-title {
+        font-size: 52px;
+    }
+
+    .second-title .border-bottom {
+        width: 700px;
+    }
+
+    .second-title img {
+        width: 150px;
+    }
+
+    /*3. Sayfa*/
+
+    .third-page-container {
+        height: 700px;
+    }
+
+    .second-box img {
+        width: 300px;
+        height: 300px;
+        border-radius: 15%;
+    }
+
+    .second-box {
+        gap: 34px;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(2, 300px);
+    }
+
+    .spiral-border img {
+        width: 230px;
+        height: 224px;
+    }
+
+    .right-title h2 {
+        font-size: 56px;
+    }
+
+    .explanation-title {
+        font-size: 35px;
+    }
+
+    button.prev2,
+    button.next2 {
+        font-size: 90px;
+    }
+
+    /*4. Sayfa*/
+
+    .top-title {
+        font-size: 40px;
+    }
+
+    .border-bottom {
+        width: 700px;
+    }
+
+    .locations img {
+        width: 500px;
+        height: 400px;
+    }
+
+    .spiral-border-2 img {
+        width: 180px;
+        height: 210px;
+    }
+
+    /*5. Sayfa*/
+
+    .title-5 {
+        font-size: 35px;
+    }
+
+    .border-bottom2 {
+        width: 850px;
+        margin-top: 250px;
+    }
+
+    .explanation-title2 {
+        margin-top: 270px;
+        font-size: 40px;
+    }
+
+    .download-icon img {
+        width: 280px;
+        height: 100px;
+        margin-top: 400px;
+    }
+
+    .QR-icon img {
+        width: 350px;
+        height: 350px;
+        margin-top: 25%;
+    }
+
+    .QR-title {
+        font-size: 50px;
+        margin-top: 25%;
+        margin-left: 65%;
+    }
+
+    .discount-title {
+        font-size: 50px;
+    }
+
+    .discount-icon img {
+        width: 350px;
+        height: 350px;
+    }
+
+    /*6. Sayfa*/
+
+    .right-title2 h2 {
+        font-size: 75px;
+    }
+
+    .right-title-border2 {
+        width: 700px;
+        margin-top: -40px;
+    }
+
+    .explanation-title3 {
+        font-size: 44px;
+    }
+
+    .second-box21 {
+        gap: 34px;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(2, 300px);
+    }
+
+    .spiral-border2 img {
+        width: 200px;
+        height: 184px;
+    }
+
+    /*7. Sayfa*/
+
+    .right-icon,
+    .left-icon {
+        height: 700px;
+    }
+
+    .right-icon h2 {
+        font-size: 50px;
+    }
+
+    .title-1,
+    .title-2,
+    .title-3 {
+        margin-top: 3%;
+    }
+
+    .title-1 ul li a {
+        font-size: 40px;
+    }
+
+    .title-1-border {
+        width: 400px;
+    }
+
+    .title-2 ul li a {
+        font-size: 40px;
+    }
+
+    .title-2-border {
+        width: 220px;
+    }
+
+    .title-3-border {
+        width: 320px;
+    }
+
+    .title-3-text {
+        font-size: 40px;
+    }
+
+    form {
+        margin-top: 10px;
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    form input[type="search"] {
+        height: 50px;
+    }
+
+    form input[type="search"]::placeholder {
+        font-size: 28px;
+    }
+
+    .title-text {
+        font-size: 35px;
+    }
+
+}
+
+/*Responsive 1440*/
+
+@media (max-width:1440px) {
+
+    /*2. Sayfa*/
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .second-title {
+        font-size: 30px;
+    }
+
+    .second-title .border-bottom {
+        width: 400px;
+    }
+
+    /*4. Sayfa*/
+
+    .locations img {
+        width: 300px;
+        height: 250px;
+    }
+
+    .spiral-border-2 img {
+        width: 110px;
+        height: 180px;
+
+    }
+
+    .top-title,
+    .border-bottom {
+        margin-left: 150px;
+    }
+
+    /*5. Sayfa*/
+
+    .title-5 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .border-bottom2 {
+        width: 500px;
+        margin-top: 180px;
+    }
+
+    .explanation-title2 {
+        margin-top: 200px;
+        font-size: 25px;
+    }
+
+    .download-icon img {
+        width: 180px;
+        height: 60px;
+        margin-top: 300px;
+    }
+
+    .QR-icon {
+        margin-top: 400px;
+    }
+
+    .QR-icon img {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    .QR-title {
+        font-size: 20px;
+        margin-top: 450px;
+    }
+
+    .discount-title {
+        font-size: 20px;
+        margin-top: 50%;
+    }
+
+    .discount-icon {
+        margin-top: 45%;
+    }
+
+    .discount-icon img {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    /*6. Sayfa*/
+
+    .right-title2 h2 {
+        font-size: 45px;
+    }
+
+    .right-title-border2 {
+        width: 420px;
+        margin-top: -20px;
+        margin-bottom: 1;
+    }
+
+    .explanation-title3 {
+        font-size: 24px;
+    }
+
+    .second-box21 {
+        margin-left: 200px;
+        grid-template-columns: repeat(2, 160px);
+        grid-template-rows: repeat(2, 160px);
+    }
+
+    .second-box21 img {
+        border-radius: 20px;
+    }
+
+    .spiral-border2 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button.prev2 {
+        left: 40px;
+    }
+
+    button.next2 {
+        right: 40px;
+    }
+
+    /*7. Sayfa*/
+
+    .left-icon,
+    .right-icon {
+        height: 500px;
+    }
+
+    .explanation-title4 {
+        margin-top: 40px;
+    }
+
+    .right-icon h2 {
+        font-size: 30px;
+    }
+
+    .title-1-border {
+        width: 250px;
+    }
+
+    .title-1 ul li a,
+    .title-2 ul li a,
+    .title-3-text {
+        font-size: 20px;
+    }
+
+    .title-2-border {
+        width: 150px;
+    }
+
+    .title-3-border {
+        width: 200px;
+        border: 1px solid #5F4B44;
+    }
+
+    form input[type="search"] {
+        width: 80%;
+        height: 40px;
+        padding: 10px 30px 10px 10px;
+    }
+
+    form input[type="search"]::placeholder {
+        font-size: 18px;
+    }
+
+    form img {
+        right: 70px;
+    }
+
+    .title-text {
+        font-size: 17px;
+    }
+
+
+}
+
+/*Responsive 1024*/
+@media (max-width:1024px) {
+
+    /*1. Sayfa*/
+
+
+    .kaffo-logo img {
+        width: 100px;
+        height: 100px;
+        left: 16%;
+    }
+
+    .top-nav img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .border-left {
+        height: 30px;
+    }
+
+    .top-nav input[type=text] {
+        width: 180px;
+        height: 30px;
+    }
+
+
+    .top-nav ul {
+        font-size: 18px;
+        margin: 0;
+    }
+
+
+    .borders {
+        height: 26px;
+    }
+
+    .bottom-nav {
+        top: 16%;
+        left: 66%;
+    }
+
+    .bottom-nav ul li a {
+        font-size: 18px;
+    }
+
+    /*2. Sayfa*/
+
+    .second-title {
+        font-size: 26px;
+        margin-left: 5%;
+    }
+
+    .second-title .border-bottom {
+        width: 350px;
+    }
+
+    .second-title img {
+        width: 60px;
+    }
+
+    .box {
+        margin-left: 220px;
+        margin-top: 20px;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 150px;
+        height: 150px;
+        font-size: 25px;
+    }
+
+    .box1 img,
+    .box2 img,
+    .box3 img,
+    .box4 img {
+        width: 55px;
+        height: 55px;
+    }
+
+    /*3. Sayfa*/
+
+    .second-box {
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: repeat(2, 130px);
+    }
+
+    .second-box img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .spiral-border img {
+        width: 94px;
+        height: 84px;
+    }
+
+
+    .right-title {
+        font-size: 20px;
+    }
+
+    .right-title h2 {
+        font-size: 24px;
+
+    }
+
+    .right-title-border {
+        width: 380px;
+    }
+
+    .explanation-title {
+        font-size: 18px;
+    }
+
+    /*4. Sayfa*/
+
+    .locations img {
+        width: 250px;
+        height: 180px;
+        margin-top: 30px;
+    }
+
+    .spiral-border-2 img {
+        width: 70px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .locate1 {
+        margin-right: -10px;
+    }
+
+    .locate2 {
+        margin-right: -40px;
+    }
+
+
+    .top-title {
+        margin-left: 0;
+        margin-bottom: -10px;
+    }
+
+    .border-bottom {
+        width: 300px;
+        margin-left: 0;
+    }
+
+    /*5. Sayfa*/
+
+    .title-5 {
+        font-size: 14px;
+    }
+
+    .border-bottom2 {
+        width: 380px;
+        margin-top: 130px;
+    }
+
+    .explanation-title2 {
+        margin-top: 140px;
+        font-size: 19px;
+    }
+
+    .download-icon img {
+        width: 140px;
+        height: 45px;
+        margin-top: 210px;
+    }
+
+    .QR-icon {
+        margin-top: 300px;
+        margin-left: 82%;
+    }
+
+    .QR-icon img {
+        width: 130px;
+        height: 130px;
+        border-radius: 10px;
+    }
+
+    .QR-title {
+        font-size: 20px;
+        margin-top: 320px;
+        margin-left: 63%;
+    }
+
+    .discount-title {
+        font-size: 20px;
+        margin-top: 48%;
+        margin-left: 80%;
+    }
+
+    .discount-icon {
+        margin-top: 45%;
+        margin-left: 65%;
+    }
+
+    .discount-icon img {
+        width: 130px;
+        height: 130px;
+        border-radius: 10px;
+    }
+
+    /*6. Sayfa*/
+
+    .right-title2 h2 {
+        font-size: 25px;
+        margin-left: -40px;
+    }
+
+    .right-title-border2 {
+        width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -40px;
+    }
+
+    .explanation-title3 {
+        font-size: 18px;
+        white-space: nowrap;
+        margin-left: -40px;
+    }
+
+
+    .second-box21 {
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: repeat(2, 130px);
+    }
+
+    .second-box21 img {
+        border-radius: 10px;
+    }
+
+    .spiral-border2 {
+        left: 52%;
+    }
+
+    .spiral-border2 img {
+        width: 100px;
+        height: 94px;
+    }
+
+    /*7. Sayfa*/
+
+    .left-icon,
+    .right-icon {
+        height: 350px;
+
+    }
+
+    .left-icon img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .footer-icons {
+        gap: 20px;
+    }
+
+    .footer-icons img {
+        max-width: 30%;
+        height: auto;
+    }
+
+    .footer-icon-border {
+        height: 50px;
+    }
+
+    .explanation-title4 {
+        font-size: 10px;
+        margin-top: 50px;
+    }
+
+    .right-icon h2 {
+        font-size: 16px;
+    }
+
+    .title-1-border {
+        width: 130px;
+    }
+
+    .title-1 ul li a,
+    .title-3-text {
+        font-size: 14px;
+    }
+
+    .title-2-border {
+        width: 100px;
+    }
+
+    .title-2 ul li a {
+        font-size: 18px;
+    }
+
+    .title-3-border {
+        width: 150px;
+    }
+
+    form input[type="search"] {
+        width: 80%;
+        height: 20px;
+        font-size: 16px;
+    }
+
+    form input[type="search"]::placeholder {
+        font-size: 14px;
+    }
+
+    form img {
+        right: 50px;
+    }
+
+    .title-text {
+        font-size: 14px;
+    }
+
+}
+
+/*Responsive 768*/
+
+@media (max-width:768px) {
+
+    /*1. Sayfa*/
+    .kaffo-logo img {
+        width: 74px;
+        height: 74px;
+    }
+
+    .top-nav img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .border-left {
+        height: 22px;
+    }
+
+    .top-nav input[type=text] {
+        width: 150px;
+        height: 22px;
+        margin-left: 15px;
+    }
+
+    .top-nav ul {
+        font-size: 16px;
+        margin-top: 0;
+        margin-left: -20px;
+    }
+
+    .borders {
+        height: 20px;
+
+    }
+
+    .bottom-nav {
+        top: 15%;
+        left: 67%;
+        margin-top: -50px;
+    }
+
+    .bottom-nav ul li a {
+        font-size: 14px;
+        margin-right: 25px;
+    }
+
+    /*2. Sayfa*/
+
+    .box {
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(2, 150px);
+    }
+
+    /*3. Sayfa*/
+
+    .third-page-container {
+        height: 400px;
+    }
+
+
+    .second-box {
+        gap: 15px;
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 100px);
+    }
+
+    .second-box img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .spiral-border img {
+        width: 60px;
+        height: 54px;
+    }
+
+    .right-title {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .right-title h2 {
+        font-size: 19px;
+
+    }
+
+    .right-title-border {
+        width: 250px;
+    }
+
+    .explanation-title {
+        font-size: 15px;
+    }
+
+    button.prev2,
+    button.next2 {
+        font-size: 20px;
+    }
+
+    /*4. Sayfa*/
+
+    .locations img {
+        width: 200px;
+        height: 150px;
+        margin-top: 30px;
+    }
+
+    .spiral-border-2 img {
+        width: 80px;
+        height: 100px;
+
+    }
+
+    .locate1 {
+        margin-right: -20px;
+    }
+
+    .locate2 {
+        margin-right: -40px;
+    }
+
+    /*5. Sayfa*/
+
+    .title-5 {
+        font-size: 11px;
+    }
+
+    .border-bottom2 {
+        width: 250px;
+        margin-top: 100px;
+    }
+
+    .explanation-title2 {
+        margin-top: 110px;
+        font-size: 14px;
+    }
+
+    .download-icon img {
+        width: 100px;
+        height: 35px;
+        margin-top: 160px;
+    }
+
+    .QR-icon {
+        margin-top: 230px;
+        margin-left: 82%;
+    }
+
+    .QR-icon img {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+    }
+
+    .QR-title {
+        font-size: 20px;
+        margin-top: 32%;
+        margin-left: 59%;
+    }
+
+    .discount-title {
+        font-size: 20px;
+        margin-top: 52%;
+        margin-left: 80%;
+    }
+
+    .discount-icon {
+        margin-top: 48%;
+        margin-left: 62%;
+    }
+
+    .discount-icon img {
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+    }
+
+    /*6. Sayfa*/
+
+    .six-page-container {
+        padding: 130px;
+    }
+
+
+    .right-title2 h2 {
+        font-size: 25px;
+        margin-bottom: -10px;
+    }
+
+    .right-title-border2 {
+        width: 250px;
+    }
+
+    .explanation-title3 {
+        font-size: 15px;
+        margin-top: -10px;
+    }
+
+    .second-box21 {
+        gap: 16px;
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 100px);
+    }
+
+    .second-box21 img {
+        border-radius: 10px;
+        margin-left: -120%;
+    }
+
+    .spiral-border2 img {
+        width: 60px;
+        height: 54px;
+    }
+
+    /*7. Sayfa*/
+
+    .left-icon,
+    .right-icon {
+        height: 300px;
+
+    }
+
+    .left-icon img {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .footer-icons {
+        gap: 10px;
+    }
+
+    .footer-icons img {
+        max-width: 25%;
+        height: auto;
+    }
+
+    .footer-icon-border {
+        height: 40px;
+    }
+
+    .explanation-title4 {
+        font-size: 10px;
+        margin-top: 40px;
+    }
+
+    .right-icon h2 {
+        font-size: 16px;
+    }
+
+    .title-1-border {
+        width: 100px;
+    }
+
+    .title-1 ul li a,
+    .title-3-text {
+        font-size: 14px;
+    }
+
+    .title-2-border {
+        width: 70px;
+    }
+
+    .title-2 ul li a {
+        font-size: 14px;
+    }
+
+    .title-3-border {
+        width: 100px;
+    }
+
+    form input[type="search"] {
+        width: 68%;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    form input[type="search"]::placeholder {
+        font-size: 14px;
+    }
+
+    form img {
+        right: 70px;
+    }
+
+    .title-text {
+        font-size: 12px;
+    }
+
+    .title-2,
+    .title-3 {
+        margin-left: 40px;
+    }
+}
+
+/*Responsive 425*/
+
+@media (max-width:425px) {
+
+ 
+    .mainMenu, .top-nav, .bottom-nav {
+        display: none; 
+    }
+
+    .kaffo-logo img {
+        width: 40px;
+        height: 40px;
+        position: absolute; 
+        top: 10%;
+        left: 40%;
+    }
+
+   .mainMenu {
+        display: block; 
+    }
+
+    .openMenu {
+        display: block; 
+        z-index: 1;
+    }
+
+    .closeMenu {
+        display: none; 
+        z-index: 1;
+    }
+    
+    .mainMenu{
+        background-color: rgba(95, 75, 68, 0.45);
+    }
+
+    .mainMenu li{
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 290px;
+        z-index: 0;
+    }
+
+    .mainMenu li a{
+        margin-left: 20%;
+        z-index: 1;
+    }
+    
+    .bottom-nav{
+        left: 20%;
+        top: 20%;
+    }
+
+    .bottom-nav ul li a {
+        font-size: 16px;
+    }
+
+    /*2. Sayfa*/
+
+    .second-title img {
+        display: none;
+    }
+
+    .box1,.box2,.box3,.box4 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .second-title {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .box {
+        margin-left: 0;
+    }
+
+    .second-title  .border-bottom {
+        width: 250px;
+    }
+
+
+    /*3. Sayfa*/
+    .third-page-container {
+        flex-direction: column;
+    }
+
+    .first-slider-box,.second-slider-box {
+        flex-direction: column;  
+    }
+
+    .spiral-border img {
+        display: none;
+    }
+    
+    .second-box {
+        gap: 0;
+        grid-template-columns: repeat(2,100px);
+        grid-template-rows: repeat(2,100px);
+    }
+
+    .second-slider-box .second-box img{
+        margin-top: -10px;
+    }
+
+    .second-box img {
+        margin-top: 40px;
+        width: 90px;
+        height: 90px;
+        border-radius: 10px;
+    }
+    
+    .explanation-title {
+        font-size: 10px;
+    }
+    
+    /*4. Sayfa*/
+
+    .four-page-container {
+        padding: 20px;
+    }
+
+    .locations {
+        flex-direction: column; 
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .locations img {
+        width: 250px;
+        height: 200px;
+        margin-top: 10px;
+        margin: 0 auto;
+    }
+
+    .locate1 {
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+
+    .locate2{
+        margin-right: 0;
+        margin-top: -50px;
+        margin-left: 20px;
+        margin-bottom: -10px;
+    }
+
+    .spiral-border-2 {
+        display: none; 
+    }
+
+    .top-title {
+        margin-left: 0;
+        text-align: center; 
+    }
+
+
+    .border-bottom {
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    /*5. Sayfa*/
+
+    .title-5 {
+        margin-left: 49%;
+        margin-top: 0;
+        word-wrap: nowrap;
+        font-size: 8px;
+    }
+    
+    .border-bottom2 {
+        width: 170px;
+        margin-top: 60px;
+        margin-left: 49%;
+    }
+    
+    .explanation-title2 {
+        margin-top: 70px;
+        margin-left: 49%;
+        font-size: 10px;
+    }
+
+    .download-icon {
+        margin-left: 49%;
+        gap: 10px;
+    }
+    
+    .download-icon img {
+        width: 60px;
+        height: 20px;
+        margin-top: 110px;
+    }
+    
+    .QR-icon {
+        margin-top: 140px;
+        margin-left: 82%;
+    }
+    
+    .QR-icon img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+    
+    .QR-title {
+        font-size: 10px;
+        margin-top: 150px;
+        margin-left: 58%;
+    }
+
+    .discount-title {
+        font-size: 10px;
+        margin-top: 52%;
+        margin-left: 82%;
+    }
+    
+    .discount-icon {
+        position: absolute;
+        margin-top: 50%;
+        margin-left: 66%;
+    }
+    
+    .discount-icon img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    /*6. Sayfa*/
+
+    .six-page-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .six-slider-box {
+        flex-direction: column;
+    }
+
+    .spiral-border2 img {
+        display: none;
+    }
+
+    .second-box21 {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 100px);
+        margin-left: 450px;
+    }
+
+    .second-box21 img {
+        border-radius: 10px;
+    }
+
+    .right-title2 {
+        flex: 1;
+        margin-right: -70px;
+        margin-bottom: 20px;
+    }
+
+    /*7. Sayfa*/
+    .seven-page-container {
+        flex-direction: column;
+    }
+    .left-icon{
+        width: 100%;
+        height: 200px;
+    }
+
+    .left-icon img {
+        max-width: 30%;
+    }
+    
+    .footer-icons {
+        margin-top: -5px;
+    }
+
+    .footer-icons img {
+        max-width: 20%;
+    }
+    
+    .footer-icon-border {
+        height: 30px;
+    }
+    
+    .explanation-title4 {
+        font-size: 8px;
+        margin-top: 10px;
+    }
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+    .right-icon {
+        width: 100%;
+        height: 350px;
+    }
+
+    .right-icon h2 {
+        font-size: 15px;
+    }
+
+    .title-2,.title-3 {
+        margin-left: 40px;
+    }
+
+    .title-1 ul li a {
+        font-size: 12px;
+    }
+    
+    .title-2 ul li a {
+        font-size: 18px;
+    }
+
+    .title-1 img{
+        width: 15%;
+        height: auto;
+    }
+    
+    .title-2 img{
+        width: 10%;
+        height: auto;
+    }
+
+    form input[type="search"] {
+        width: 70%;
+        height: 20px;
+    }
+    
+    form img {
+        right: 55px;
+    }
+    
+    .title-text {
+        font-size: 15px;
+    }
+}
+
+
+
+/*Responsive 375*/
+
+@media (max-width:375px){
+    
+    /*1. Sayfa*/
+
+    .mainMenu li{
+        height: 250px;
+    }
+
+    .mainMenu li a{
+        margin-left: 35%;
+    }
+
+    .bottom-nav{
+        top: 19%;
+    }
+
+    /*2. Sayfa*/
+    .box1,.box2,.box3,.box4 {
+        width: 140px;
+        height: 140px;
+    }
+
+    /*4. Sayfa*/
+    .border-bottom {
+        width: 250px;
+    }
+
+    /*7. Sayfa*/
+
+    .right-icon {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .title-3{
+        margin-top: -30px;
+    }
+
+    .title-3-text {
+        font-size: 20px;
+    }
+
+    form input[type="search"] {
+        width: 100%;
+        height: 20px;
+    }
+    
+    form img {
+        right: 15px;
+    }
+    
+    .title-text {
+        font-size: 18px;
+    }
+
+}
+
+/*Responsive 320*/
+
+@media (max-width:320px){
+
+    /*1. Sayfa*/
+
+    .prev,.next{
+        font-size: 16px;
+    }
+
+    .mainMenu li{
+        height: 210px;
+    }
+
+    .mainMenu li a{
+        margin-left: 35%;
+        
+    }
+
+    .bottom-nav{
+        top: 17%;
+    }
+
+    .bottom-nav ul li a {
+        font-size: 14px;
+    }
+
+
+    /*2. Sayfa*/
+    .box {
+        grid-template-columns: repeat(2,120px);
+        grid-template-rows: repeat(2,120px);
+    }
+
+     .box1,.box2,.box3,.box4 {
+        width: 120px;
+        height: 120px;
+    }
+
+    /*3. Sayfa*/
+
+    .second-box {
+        gap: 10px;
+        grid-template-columns: repeat(2,80px);
+        grid-template-rows: repeat(2,80px);
+    }
+
+    .second-slider-box .second-box img{
+        margin-top: -10px;
+    }
+
+    .first-slider-box .second-box img{
+        margin-top: 10px;
+    }
+
+    .second-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    button.prev2{
+        left: 5px;
+    }
+
+    button.next2 {
+        right: 5px;
+    }
+    
+     /*4. Sayfa*/
+     .border-bottom {
+        width: 200px;
+    }
+
+    /*5. Sayfa*/
+
+    .title-5 {
+        margin-left: 48%;
+        font-size: 6px;
+    }
+    
+    .border-bottom2 {
+        width: 150px;
+        margin-top: 45px;
+        margin-left: 48%;
+    }
+    
+    .explanation-title2 {
+        margin-top: 50px;
+        margin-left: 48%;
+        font-size: 8px;
+    }
+
+    .download-icon {
+        margin-left: 48%;
+    }
+    
+    .download-icon img {
+        width: 40px;
+        height: 12px;
+        margin-top: 80px;
+    }
+    
+    .QR-icon {
+        margin-top: 95px;
+        margin-left: 82%;
+    }
+    
+    .QR-icon img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .QR-title {
+        font-size: 8px;
+        margin-top: 105px;
+        margin-left: 57%;
+    }
+
+    .discount-title {
+        font-size: 8px;
+        margin-top: 52%;
+        margin-left: 82%;
+    }
+    
+    .discount-icon {
+        margin-top: 49%;
+        margin-left: 64%;
+    }
+    
+    .discount-icon img {
+        width: 45px;
+        height: 45px;
+    }
+}
